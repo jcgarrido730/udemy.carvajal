@@ -38,22 +38,19 @@
 
     //continuación
     const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }) => {
-        let result;
+
+        let result: number;
+
         if ( isDead ) {
-            result = 1500;
-        } else {
-            if ( isSeparated ) {
-                result = 2500;
-            } else {
-                if ( isRetired ) {
-                    result = 3000;
-                } else {
-                    result = 4000; 
-                }
-            }
+            return 1500;
+        } 
+        
+        if ( isSeparated ) {
+            return 2500;
         }
         
-        return result;
+        return isRetired ? 3000 : 4000;
+
     }
 
 
