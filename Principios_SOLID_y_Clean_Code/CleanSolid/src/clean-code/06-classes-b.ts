@@ -87,7 +87,7 @@
         role : 'Admin',
         name : 'Fulano',
         gender : 'M',
-        birthdate : new Date('1985-10-21')
+        birthdate : new Date('1900-01-01')
     });
 
     console.log({ userSettings });
