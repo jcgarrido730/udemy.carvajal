@@ -20,7 +20,7 @@ class Hummingbird implements Bird{
 }
 
 class Ostrich implements Bird{
-    public fly(): void {
+    public fly(){
         throw new Error('Esta ave no vuela');
     }
     public eat(){}
@@ -29,7 +29,7 @@ class Ostrich implements Bird{
 }
 
 class Penguin implements Bird{
-    public fly(): void {
+    public fly(){
         throw new Error('Esta ave no vuela');
     }
     public eat(){}
