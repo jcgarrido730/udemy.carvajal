@@ -13,10 +13,10 @@ export class PostService {
     private posts: Post[] = [];
 
     //datos locales
-    constructor(private postProvider: LocalDataBaseService) {}
+    //constructor(private postProvider: LocalDataBaseService) {}
 
     //Inyección de dependencia 
-    //constructor(private postProvider: JsonDataBaseService) {}
+    constructor(private postProvider: JsonDataBaseService) {}
 
     async getPosts() {
         //const jsonDB = new LocalDataBaseService();
@@ -24,10 +24,10 @@ export class PostService {
         //this.posts = await jsonDB.getPosts();
         
         //llamado para nuestros datos locales
-        this.posts = await this.postProvider.getFakePosts();
+        //this.posts = await this.postProvider.getFakePosts();
 
         //llamado datos del json aplicando inyección de dependencias
-        //this.posts = await this.postProvider.getPosts();
+        this.posts = await this.postProvider.getPosts();
 
         return this.posts;
     }
